@@ -16,13 +16,13 @@
 <body>
     <div class="page-shell">
         <nav class="topbar" aria-label="Primary navigation">
-            <a href="#about">About</a>
-            <a href="#experience">Experience</a>
-            <a href="#skills">Skills</a>
-            <a href="#projects">Projects</a>
-            <a href="#contact">Contact</a>
-            <button class="theme-toggle" type="button" aria-label="Switch to dark mode" title="Switch to dark mode" onclick="toggleTheme()">
-                <i class="fas fa-moon"></i>
+            <a href="#about">about.md</a>
+            <a href="#experience">experience.ts</a>
+            <a href="#skills">skills.json</a>
+            <a href="#projects">projects.ts</a>
+            <a href="#contact">contact.env</a>
+            <button class="theme-toggle" type="button" aria-label="Switch to light mode" title="Switch to light mode" onclick="toggleTheme()">
+                <i class="fas fa-sun"></i>
             </button>
         </nav>
 
@@ -38,7 +38,7 @@
                         <i class="fas fa-code"></i>
                         View Projects
                     </a>
-                    <a href="Kubeshan-Govender-CV.pdf" download class="secondary-btn">
+                    <a href="assets/docs/Kubeshan-Govender-CV.pdf" download class="secondary-btn">
                         <i class="fas fa-file-pdf"></i>
                         Download CV
                     </a>
@@ -50,7 +50,7 @@
             </div>
 
             <div class="profile-card" data-aos="zoom-in" data-aos-delay="150">
-                <img src="profile.jpg" alt="Kubeshan Govender" class="profile-img" />
+                <img src="assets/images/profile.jpg" alt="Kubeshan Govender" class="profile-img" />
                 <div>
                     <strong>Based in South Africa</strong>
                     <span>Software development, systems support, and practical problem solving.</span>
@@ -75,94 +75,319 @@
                     <h2>Education & Certifications</h2>
                 </div>
 
-                <div class="timeline">
-                    <article class="timeline-item">
-                        <div>
-                            <h3>University of South Africa</h3>
-                            <p>BSc Applied Mathematics & Computer Science</p>
-                            <em>Graduated</em>
-                        </div>
-                        <button onclick="toggleCertificate('academicRecordPDF')">View University Module List</button>
-                        <div id="academicRecordPDF" class="certificate-panel">
-                            <iframe src="Academic-Record.pdf" title="Academic Record">
-                                This browser does not support PDFs. Please download the PDF to view it:
-                                <a href="Academic-Record.pdf">Download PDF</a>
-                            </iframe>
-                        </div>
-                    </article>
+                <div class="cert-tree">
 
-                    <article class="timeline-item">
-                        <div>
-                            <h3>Mountview Secondary School</h3>
-                            <p>NSC: Mathematics, IT, Physical Sciences, Life Sciences</p>
-                            <em>Graduated 2022</em>
+                    <div class="tree-node folder is-open">
+                        <button class="tree-toggle" onclick="toggleFolder(this)">
+                            <i class="fas fa-chevron-right toggle-icon"></i>
+                            <i class="fas fa-folder folder-icon"></i>
+                            <span class="folder-name">education</span>
+                        </button>
+                        <div class="tree-children">
+                            <a class="tree-file" href="assets/certs/education/degree.jpg" target="_blank" rel="noopener">
+                                <i class="fas fa-file-image file-icon"></i>
+                                <span class="file-name">degree.jpg</span>
+                                <span class="file-meta">University of South Africa (UNISA) &middot; BSc Applied Mathematics &amp; Computer Science &middot; Completed 2026</span>
+                            </a>
+                            <div class="file-preview-wrap">
+                                <div class="file-preview-inner">
+                                    <img class="file-preview" src="assets/certs/education/degree.jpg" alt="Preview" loading="lazy" />
+                                </div>
+                            </div>
+                            <a class="tree-file" href="assets/certs/education/NSC-certificate.jpg" target="_blank" rel="noopener">
+                                <i class="fas fa-file-image file-icon"></i>
+                                <span class="file-name">NSC-certificate.jpg</span>
+                                <span class="file-meta">Mountview Secondary School &middot; National Senior Certificate &middot; Graduated 2022</span>
+                            </a>
+                            <div class="file-preview-wrap">
+                                <div class="file-preview-inner">
+                                    <img class="file-preview" src="assets/certs/education/NSC-certificate.jpg" alt="Preview" loading="lazy" />
+                                </div>
+                            </div>
+                            <a class="tree-file" href="assets/certs/education/Matric-Merit.jpg" target="_blank" rel="noopener">
+                                <i class="fas fa-file-image file-icon"></i>
+                                <span class="file-name">Matric-Merit.jpg</span>
+                                <span class="file-meta">Mountview Secondary School &middot; Merit Certificate</span>
+                            </a>
+                            <div class="file-preview-wrap">
+                                <div class="file-preview-inner">
+                                    <img class="file-preview" src="assets/certs/education/Matric-Merit.jpg" alt="Preview" loading="lazy" />
+                                </div>
+                            </div>
                         </div>
-                        <div class="button-row">
-                            <button onclick="toggleCertificate('certNSC')">View NSC Certificate</button>
-                            <button onclick="toggleCertificate('certMerit')">View Merit Certificate</button>
-                        </div>
-                        <div id="certNSC" class="certificate-panel">
-                            <img src="NSC-certificate.jpg" alt="NSC Certificate" class="certificate-img" />
-                        </div>
-                        <div id="certMerit" class="certificate-panel">
-                            <img src="Matric-Merit.jpg" alt="Merit Certificate" class="certificate-img" />
-                        </div>
-                    </article>
+                    </div>
 
-                    <article class="timeline-item">
-                        <div>
-                            <h3>FNB App Academy 2025</h3>
-                            <p>Certificate in Full Stack Development</p>
-                        </div>
-                        <button onclick="toggleCertificate('certFNB')">View Certificate</button>
-                        <div id="certFNB" class="certificate-panel">
-                            <img src="fnb-certificate.jpg" alt="FNB Certificate" class="certificate-img" />
-                        </div>
-                    </article>
+                    <div class="tree-node folder is-open">
+                        <button class="tree-toggle" onclick="toggleFolder(this)">
+                            <i class="fas fa-chevron-right toggle-icon"></i>
+                            <i class="fas fa-folder folder-icon"></i>
+                            <span class="folder-name">certifications</span>
+                        </button>
+                        <div class="tree-children">
 
-                    <article class="timeline-item">
-                        <div>
-                            <h3>Inter-Varsity Hackathon 2025</h3>
-                            <p>Participant</p>
-                        </div>
-                        <button onclick="toggleCertificate('certHackathon')">View Certificate</button>
-                        <div id="certHackathon" class="certificate-panel">
-                            <img src="InterVarsity.jpg" alt="Hackathon Certificate" class="certificate-img" />
-                        </div>
-                    </article>
+                            <div class="tree-node folder nested is-open">
+                                <button class="tree-toggle" onclick="toggleFolder(this)">
+                                    <i class="fas fa-chevron-right toggle-icon"></i>
+                                    <i class="fas fa-folder folder-icon"></i>
+                                    <span class="folder-name">ibm</span>
+                                    <span class="folder-count">3</span>
+                                </button>
+                                <div class="tree-children">
+                                    <a class="tree-file" href="assets/certs/ibm/IBM_Building_AI_Agent.jpg" target="_blank" rel="noopener">
+                                        <i class="fas fa-file-image file-icon"></i>
+                                        <span class="file-name">IBM_Building_AI_Agent.jpg</span>
+                                        <span class="file-meta">IBM Intelligent by Design: Build an AI Agent &middot; Certificate of Completion</span>
+                                    </a>
+                                    <div class="file-preview-wrap">
+                                        <div class="file-preview-inner">
+                                            <img class="file-preview" src="assets/certs/ibm/IBM_Building_AI_Agent.jpg" alt="Preview" loading="lazy" />
+                                        </div>
+                                    </div>
+                                    <a class="tree-file" href="assets/certs/ibm/IBM_AI_Coding_Cert.jpg" target="_blank" rel="noopener">
+                                        <i class="fas fa-file-image file-icon"></i>
+                                        <span class="file-name">IBM_AI_Coding_Cert.jpg</span>
+                                        <span class="file-meta">Using Generative AI for Software Development &middot; Certificate of Completion</span>
+                                    </a>
+                                    <div class="file-preview-wrap">
+                                        <div class="file-preview-inner">
+                                            <img class="file-preview" src="assets/certs/ibm/IBM_AI_Coding_Cert.jpg" alt="Preview" loading="lazy" />
+                                        </div>
+                                    </div>
+                                    <a class="tree-file" href="assets/certs/ibm/IBM_Granite_Cert.jpg" target="_blank" rel="noopener">
+                                        <i class="fas fa-file-image file-icon"></i>
+                                        <span class="file-name">IBM_Granite_Cert.jpg</span>
+                                        <span class="file-meta">IBM Granite Models for Software Development &middot; Certificate of Completion</span>
+                                    </a>
+                                    <div class="file-preview-wrap">
+                                        <div class="file-preview-inner">
+                                            <img class="file-preview" src="assets/certs/ibm/IBM_Granite_Cert.jpg" alt="Preview" loading="lazy" />
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
 
-                    <article class="timeline-item">
-                        <div>
-                            <h3>IBM Intelligent by Design: Build an AI Agent</h3>
-                            <p>Certificate of Completion</p>
-                        </div>
-                        <button onclick="toggleCertificate('certIBMAgentBuild')">View Certificate</button>
-                        <div id="certIBMAgentBuild" class="certificate-panel">
-                            <img src="IBM_Building_AI_Agent.jpg" alt="IBM Intelligent by Design: Build an AI Agent Certificate" class="certificate-img" />
-                        </div>
-                    </article>
+                            <div class="tree-node folder nested">
+                                <button class="tree-toggle" onclick="toggleFolder(this)">
+                                    <i class="fas fa-chevron-right toggle-icon"></i>
+                                    <i class="fas fa-folder folder-icon"></i>
+                                    <span class="folder-name">bpesa</span>
+                                    <span class="folder-count">18</span>
+                                </button>
+                                <div class="tree-children">
+                                    <a class="tree-file" href="assets/certs/bpesa/Advanced Active Listening for Customer Insights.jpg" target="_blank" rel="noopener">
+                                        <i class="fas fa-file-image file-icon"></i>
+                                        <span class="file-name">Advanced Active Listening for Customer Insights</span>
+                                    </a>
+                                    <div class="file-preview-wrap">
+                                        <div class="file-preview-inner">
+                                            <img class="file-preview" src="assets/certs/bpesa/Advanced Active Listening for Customer Insights.jpg" alt="Preview" loading="lazy" />
+                                        </div>
+                                    </div>
+                                    <a class="tree-file" href="assets/certs/bpesa/AI Transformation Leader.jpg" target="_blank" rel="noopener">
+                                        <i class="fas fa-file-image file-icon"></i>
+                                        <span class="file-name">AI Transformation Leader</span>
+                                    </a>
+                                    <div class="file-preview-wrap">
+                                        <div class="file-preview-inner">
+                                            <img class="file-preview" src="assets/certs/bpesa/AI Transformation Leader.jpg" alt="Preview" loading="lazy" />
+                                        </div>
+                                    </div>
+                                    <a class="tree-file" href="assets/certs/bpesa/Change Management.jpg" target="_blank" rel="noopener">
+                                        <i class="fas fa-file-image file-icon"></i>
+                                        <span class="file-name">Change Management</span>
+                                    </a>
+                                    <div class="file-preview-wrap">
+                                        <div class="file-preview-inner">
+                                            <img class="file-preview" src="assets/certs/bpesa/Change Management.jpg" alt="Preview" loading="lazy" />
+                                        </div>
+                                    </div>
+                                    <a class="tree-file" href="assets/certs/bpesa/Communicating Through Conflict.jpg" target="_blank" rel="noopener">
+                                        <i class="fas fa-file-image file-icon"></i>
+                                        <span class="file-name">Communicating Through Conflict</span>
+                                    </a>
+                                    <div class="file-preview-wrap">
+                                        <div class="file-preview-inner">
+                                            <img class="file-preview" src="assets/certs/bpesa/Communicating Through Conflict.jpg" alt="Preview" loading="lazy" />
+                                        </div>
+                                    </div>
+                                    <a class="tree-file" href="assets/certs/bpesa/Conflict Management.jpg" target="_blank" rel="noopener">
+                                        <i class="fas fa-file-image file-icon"></i>
+                                        <span class="file-name">Conflict Management</span>
+                                    </a>
+                                    <div class="file-preview-wrap">
+                                        <div class="file-preview-inner">
+                                            <img class="file-preview" src="assets/certs/bpesa/Conflict Management.jpg" alt="Preview" loading="lazy" />
+                                        </div>
+                                    </div>
+                                    <a class="tree-file" href="assets/certs/bpesa/Empowering Employee Decision Making.jpg" target="_blank" rel="noopener">
+                                        <i class="fas fa-file-image file-icon"></i>
+                                        <span class="file-name">Empowering Employee Decision Making</span>
+                                    </a>
+                                    <div class="file-preview-wrap">
+                                        <div class="file-preview-inner">
+                                            <img class="file-preview" src="assets/certs/bpesa/Empowering Employee Decision Making.jpg" alt="Preview" loading="lazy" />
+                                        </div>
+                                    </div>
+                                    <a class="tree-file" href="assets/certs/bpesa/Giving Effective Feedback.jpg" target="_blank" rel="noopener">
+                                        <i class="fas fa-file-image file-icon"></i>
+                                        <span class="file-name">Giving Effective Feedback</span>
+                                    </a>
+                                    <div class="file-preview-wrap">
+                                        <div class="file-preview-inner">
+                                            <img class="file-preview" src="assets/certs/bpesa/Giving Effective Feedback.jpg" alt="Preview" loading="lazy" />
+                                        </div>
+                                    </div>
+                                    <a class="tree-file" href="assets/certs/bpesa/Innovation.jpg" target="_blank" rel="noopener">
+                                        <i class="fas fa-file-image file-icon"></i>
+                                        <span class="file-name">Innovation</span>
+                                    </a>
+                                    <div class="file-preview-wrap">
+                                        <div class="file-preview-inner">
+                                            <img class="file-preview" src="assets/certs/bpesa/Innovation.jpg" alt="Preview" loading="lazy" />
+                                        </div>
+                                    </div>
+                                    <a class="tree-file" href="assets/certs/bpesa/Leading by Example.jpg" target="_blank" rel="noopener">
+                                        <i class="fas fa-file-image file-icon"></i>
+                                        <span class="file-name">Leading by Example</span>
+                                    </a>
+                                    <div class="file-preview-wrap">
+                                        <div class="file-preview-inner">
+                                            <img class="file-preview" src="assets/certs/bpesa/Leading by Example.jpg" alt="Preview" loading="lazy" />
+                                        </div>
+                                    </div>
+                                    <a class="tree-file" href="assets/certs/bpesa/Leading Through Crisis.jpg" target="_blank" rel="noopener">
+                                        <i class="fas fa-file-image file-icon"></i>
+                                        <span class="file-name">Leading Through Crisis</span>
+                                    </a>
+                                    <div class="file-preview-wrap">
+                                        <div class="file-preview-inner">
+                                            <img class="file-preview" src="assets/certs/bpesa/Leading Through Crisis.jpg" alt="Preview" loading="lazy" />
+                                        </div>
+                                    </div>
+                                    <a class="tree-file" href="assets/certs/bpesa/Leading with Empathy and Social Skills.jpg" target="_blank" rel="noopener">
+                                        <i class="fas fa-file-image file-icon"></i>
+                                        <span class="file-name">Leading with Empathy and Social Skills</span>
+                                    </a>
+                                    <div class="file-preview-wrap">
+                                        <div class="file-preview-inner">
+                                            <img class="file-preview" src="assets/certs/bpesa/Leading with Empathy and Social Skills.jpg" alt="Preview" loading="lazy" />
+                                        </div>
+                                    </div>
+                                    <a class="tree-file" href="assets/certs/bpesa/Performance Reviews 101.jpg" target="_blank" rel="noopener">
+                                        <i class="fas fa-file-image file-icon"></i>
+                                        <span class="file-name">Performance Reviews 101</span>
+                                    </a>
+                                    <div class="file-preview-wrap">
+                                        <div class="file-preview-inner">
+                                            <img class="file-preview" src="assets/certs/bpesa/Performance Reviews 101.jpg" alt="Preview" loading="lazy" />
+                                        </div>
+                                    </div>
+                                    <a class="tree-file" href="assets/certs/bpesa/Planning and Delegation in a Team Setting.jpg" target="_blank" rel="noopener">
+                                        <i class="fas fa-file-image file-icon"></i>
+                                        <span class="file-name">Planning and Delegation in a Team Setting</span>
+                                    </a>
+                                    <div class="file-preview-wrap">
+                                        <div class="file-preview-inner">
+                                            <img class="file-preview" src="assets/certs/bpesa/Planning and Delegation in a Team Setting.jpg" alt="Preview" loading="lazy" />
+                                        </div>
+                                    </div>
+                                    <a class="tree-file" href="assets/certs/bpesa/Planning and Delegation.jpg" target="_blank" rel="noopener">
+                                        <i class="fas fa-file-image file-icon"></i>
+                                        <span class="file-name">Planning and Delegation</span>
+                                    </a>
+                                    <div class="file-preview-wrap">
+                                        <div class="file-preview-inner">
+                                            <img class="file-preview" src="assets/certs/bpesa/Planning and Delegation.jpg" alt="Preview" loading="lazy" />
+                                        </div>
+                                    </div>
+                                    <a class="tree-file" href="assets/certs/bpesa/Productivity Tools and Techniques.jpg" target="_blank" rel="noopener">
+                                        <i class="fas fa-file-image file-icon"></i>
+                                        <span class="file-name">Productivity Tools and Techniques</span>
+                                    </a>
+                                    <div class="file-preview-wrap">
+                                        <div class="file-preview-inner">
+                                            <img class="file-preview" src="assets/certs/bpesa/Productivity Tools and Techniques.jpg" alt="Preview" loading="lazy" />
+                                        </div>
+                                    </div>
+                                    <a class="tree-file" href="assets/certs/bpesa/Safeguarding Policy.jpg" target="_blank" rel="noopener">
+                                        <i class="fas fa-file-image file-icon"></i>
+                                        <span class="file-name">Safeguarding Policy</span>
+                                    </a>
+                                    <div class="file-preview-wrap">
+                                        <div class="file-preview-inner">
+                                            <img class="file-preview" src="assets/certs/bpesa/Safeguarding Policy.jpg" alt="Preview" loading="lazy" />
+                                        </div>
+                                    </div>
+                                    <a class="tree-file" href="assets/certs/bpesa/Strategic Thinking.jpg" target="_blank" rel="noopener">
+                                        <i class="fas fa-file-image file-icon"></i>
+                                        <span class="file-name">Strategic Thinking</span>
+                                    </a>
+                                    <div class="file-preview-wrap">
+                                        <div class="file-preview-inner">
+                                            <img class="file-preview" src="assets/certs/bpesa/Strategic Thinking.jpg" alt="Preview" loading="lazy" />
+                                        </div>
+                                    </div>
+                                    <a class="tree-file" href="assets/certs/bpesa/The Leadership Voice.jpg" target="_blank" rel="noopener">
+                                        <i class="fas fa-file-image file-icon"></i>
+                                        <span class="file-name">The Leadership Voice</span>
+                                    </a>
+                                    <div class="file-preview-wrap">
+                                        <div class="file-preview-inner">
+                                            <img class="file-preview" src="assets/certs/bpesa/The Leadership Voice.jpg" alt="Preview" loading="lazy" />
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
 
-                    <article class="timeline-item">
-                        <div>
-                            <h3>Using Generative AI for Software Development</h3>
-                            <p>Certificate of Completion</p>
-                        </div>
-                        <button onclick="toggleCertificate('certIBMAI')">View Certificate</button>
-                        <div id="certIBMAI" class="certificate-panel">
-                            <img src="IBM_AI_Coding_Cert.jpg" alt="Using Generative AI for Software Development Certificate" class="certificate-img" />
-                        </div>
-                    </article>
+                            <div class="tree-node folder nested is-open">
+                                <button class="tree-toggle" onclick="toggleFolder(this)">
+                                    <i class="fas fa-chevron-right toggle-icon"></i>
+                                    <i class="fas fa-folder folder-icon"></i>
+                                    <span class="folder-name">microsoft</span>
+                                    <span class="folder-count">1</span>
+                                </button>
+                                <div class="tree-children">
+                                    <a class="tree-file" href="assets/certs/microsoft/Microsoft-AI Transformation Leader.jpg" target="_blank" rel="noopener">
+                                        <i class="fas fa-file-image file-icon"></i>
+                                        <span class="file-name">Microsoft-AI Transformation Leader.jpg</span>
+                                        <span class="file-meta">AI Transformation Leader &middot; Microsoft</span>
+                                    </a>
+                                    <div class="file-preview-wrap">
+                                        <div class="file-preview-inner">
+                                            <img class="file-preview" src="assets/certs/microsoft/Microsoft-AI Transformation Leader.jpg" alt="Preview" loading="lazy" />
+                                        </div>
+                                    </div>
+                                    <a class="tree-file" href="https://learn.microsoft.com/api/credentials/share/en-us/KUBESHANGOVENDER-9445/29689969172E3030?sharingId=76B064C826971E30" target="_blank" rel="noopener">
+                                        <i class="fas fa-arrow-up-right-from-square file-icon"></i>
+                                        <span class="file-name">Verify online</span>
+                                        <span class="file-meta">Microsoft Learn &middot; credential verification</span>
+                                    </a>
+                                </div>
+                            </div>
 
-                    <article class="timeline-item">
-                        <div>
-                            <h3>IBM Granite Models for Software Development</h3>
-                            <p>Certificate of Completion</p>
+                            <a class="tree-file" href="assets/certs/other/fnb-certificate.jpg" target="_blank" rel="noopener">
+                                <i class="fas fa-file-image file-icon"></i>
+                                <span class="file-name">fnb-certificate.jpg</span>
+                                <span class="file-meta">FNB App Academy 2025 &middot; Certificate in Full Stack Development</span>
+                            </a>
+                            <div class="file-preview-wrap">
+                                <div class="file-preview-inner">
+                                    <img class="file-preview" src="assets/certs/other/fnb-certificate.jpg" alt="Preview" loading="lazy" />
+                                </div>
+                            </div>
+                            <a class="tree-file" href="assets/certs/other/InterVarsity.jpg" target="_blank" rel="noopener">
+                                <i class="fas fa-file-image file-icon"></i>
+                                <span class="file-name">InterVarsity.jpg</span>
+                                <span class="file-meta">Inter-Varsity Hackathon 2025 &middot; Participant</span>
+                            </a>
+                            <div class="file-preview-wrap">
+                                <div class="file-preview-inner">
+                                    <img class="file-preview" src="assets/certs/other/InterVarsity.jpg" alt="Preview" loading="lazy" />
+                                </div>
+                            </div>
                         </div>
-                        <button onclick="toggleCertificate('certIBMGranite')">View Certificate</button>
-                        <div id="certIBMGranite" class="certificate-panel">
-                            <img src="IBM_Granite_Cert.jpg" alt="IBM Granite for Software Development Certificate" class="certificate-img" />
-                        </div>
-                    </article>
+                    </div>
+
                 </div>
             </section>
 
@@ -196,7 +421,7 @@
 
                     <article class="job">
                         <h3>IT Support, Admin & Fleet Maintenance Assistant - Faith Trucking</h3>
-                        <em>2023 - 2025</em>
+                        <em>2023 - Present</em>
                         <ul>
                             <li>Automated delivery note data capture processes to improve efficiency and accuracy.</li>
                             <li>Handled invoicing, generated statements, and managed client communications via email.</li>
@@ -291,15 +516,15 @@
                     <h2>Let's connect.</h2>
                 </div>
                 <div class="contact-links">
-                    <a href="tel:0683779310">
+                    <a href="tel:0637750267">
                         <i class="fas fa-phone"></i>
-                        068-377-9310
+                        063-775-0267
                     </a>
                     <a href="mailto:kubeshangovender040908@gmail.com">
                         <i class="fas fa-envelope"></i>
                         kubeshangovender040908@gmail.com
                     </a>
-                    <a href="Kubeshan-Govender-CV.pdf" download>
+                    <a href="assets/docs/Kubeshan-Govender-CV.pdf" download>
                         <i class="fas fa-file-pdf"></i>
                         Download CV
                     </a>
@@ -320,28 +545,28 @@
         const savedTheme = localStorage.getItem("theme");
         const themeToggle = document.querySelector(".theme-toggle");
 
-        if (savedTheme === "dark") {
-            document.body.classList.add("dark-theme");
+        // Default theme is dark (VS Code Dark+). Opting in to "light" is the toggle action.
+        if (savedTheme === "light") {
+            document.body.classList.add("light-theme");
         }
 
         updateThemeToggle();
 
-        function toggleCertificate(id) {
-            const el = document.getElementById(id);
-            el.classList.toggle("is-visible");
+        function toggleFolder(button) {
+            button.parentElement.classList.toggle("is-open");
         }
 
         function toggleTheme() {
-            document.body.classList.toggle("dark-theme");
-            localStorage.setItem("theme", document.body.classList.contains("dark-theme") ? "dark" : "light");
+            document.body.classList.toggle("light-theme");
+            localStorage.setItem("theme", document.body.classList.contains("light-theme") ? "light" : "dark");
             updateThemeToggle();
         }
 
         function updateThemeToggle() {
-            const isDark = document.body.classList.contains("dark-theme");
-            themeToggle.innerHTML = `<i class="fas fa-${isDark ? "sun" : "moon"}"></i>`;
-            themeToggle.setAttribute("aria-label", isDark ? "Switch to light mode" : "Switch to dark mode");
-            themeToggle.setAttribute("title", isDark ? "Switch to light mode" : "Switch to dark mode");
+            const isLight = document.body.classList.contains("light-theme");
+            themeToggle.innerHTML = `<i class="fas fa-${isLight ? "moon" : "sun"}"></i>`;
+            themeToggle.setAttribute("aria-label", isLight ? "Switch to dark mode" : "Switch to light mode");
+            themeToggle.setAttribute("title", isLight ? "Switch to dark mode" : "Switch to light mode");
         }
 
         document.querySelectorAll(".filter-btn").forEach((button) => {
